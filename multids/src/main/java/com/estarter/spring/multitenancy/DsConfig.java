@@ -15,6 +15,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 public class DsConfig {
+
     @Value("${myds1.url}")
     private String url1;
     @Value("${myds1.username}")
@@ -48,7 +49,7 @@ public class DsConfig {
                 return TenantStorage.getTenantName();
             }
         };
-        Map<Object,Object> dataSources = new HashMap<>();
+        Map<Object, Object> dataSources = new HashMap<>();
         dataSources.put("db1", ds1);
         dataSources.put("db2", ds2);
         dataSources.put(null, ds1);

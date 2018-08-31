@@ -2,6 +2,8 @@
 
 This is an example of spring application working with multiple oracle databases.
 
+The aim of the project is to find out how to define datasource in spring which would survive database reboot.
+
 ## How to start
 
 1. Run tenant databases

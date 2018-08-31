@@ -16,13 +16,13 @@ public class CustomDsApplication {
     @Autowired
     private UserRepository userRepository;
 
+    public static void main(String[] args) {
+        SpringApplication.run(CustomDsApplication.class, args);
+    }
+
     @GetMapping("/users")
     public Iterable<User> getUsers() {
         return userRepository.findAll();
-    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(CustomDsApplication.class, args);
     }
 
 }

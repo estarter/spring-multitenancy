@@ -17,14 +17,14 @@ public class MultiDsApplication {
     @Autowired
     private UserRepository userRepository;
 
+    public static void main(String[] args) {
+        SpringApplication.run(MultiDsApplication.class, args);
+    }
+
     @GetMapping("/users")
     public Iterable<User> getUsers(@RequestHeader("X-TenantID") String tenantName) {
         TenantStorage.setTenantName(tenantName);
         return userRepository.findAll();
-    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(MultiDsApplication.class, args);
     }
 
 }
