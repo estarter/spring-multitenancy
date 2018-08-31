@@ -1,0 +1,12 @@
+server:
+    port: 8082
+spring:
+#    jpa:
+#        database: default
+#        hibernate:
+#          ddl-auto: create
+    myds:
+        url: jdbc:mysql://localhost:33061/test_db1?allowPublicKeyRetrieval=true&useSSL=false
+        username: db_user1
+        password: db_pwd
+        driver-class-name: com.mysql.cj.jdbc.Driver

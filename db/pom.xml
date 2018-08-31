@@ -8,15 +8,11 @@
         <artifactId>multitenancy-super</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>single</artifactId>
+    <artifactId>db</artifactId>
     <packaging>jar</packaging>
 
 
     <dependencies>
-        <dependency>
-            <groupId>com.estarter.spring.multitenancy</groupId>
-            <artifactId>db</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
