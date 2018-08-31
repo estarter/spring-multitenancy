@@ -1,0 +1,18 @@
+server:
+    port: 8083
+#spring:
+#    jpa:
+#        database: default
+#        hibernate:
+#          ddl-auto: create
+myds1:
+    url: jdbc:mysql://localhost:33061/test_db1?allowPublicKeyRetrieval=true&useSSL=false
+    username: db_user1
+    password: db_pwd
+myds2:
+    url: jdbc:mysql://localhost:33062/test_db2?allowPublicKeyRetrieval=true&useSSL=false
+    username: db_user2
+    password: db_pwd
+management:
+    security:
+        enabled: false

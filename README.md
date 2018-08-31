@@ -9,6 +9,9 @@ This is an example of spring application working with multiple oracle databases.
 docker run --name test_db1 -e MYSQL_ROOT_PASSWORD=my-secret-pw \
         -e MYSQL_DATABASE=test_db1 -e MYSQL_USER=db_user1 -e MYSQL_PASSWORD=db_pwd \
         -d -p 33061:3306 mysql:8
+docker run --name test_db2 -e MYSQL_ROOT_PASSWORD=my-secret-pw \
+        -e MYSQL_DATABASE=test_db2 -e MYSQL_USER=db_user2 -e MYSQL_PASSWORD=db_pwd \
+        -d -p 33062:3306 mysql:8
 ```
 
 2. run submodules
@@ -24,4 +27,7 @@ http :8081/users ; http :8082/users
 ```bash
 docker restart test_db1 &
 http :8081/users ; http :8082/users
+
+docker restart test_db1 &
+http :8083/users X-TenantID:db1 ; http :8083/users X-TenantID:db2
 ```

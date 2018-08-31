@@ -24,7 +24,8 @@
 	<modules>
 		<module>db</module>
 		<module>single</module>
-        <module>single-customds</module>
+        <module>customds</module>
+        <module>multids</module>
 	</modules>
     <dependencyManagement>
         <dependencies>
