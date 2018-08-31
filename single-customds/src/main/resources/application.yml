@@ -10,3 +10,6 @@ spring:
         username: db_user1
         password: db_pwd
         driver-class-name: com.mysql.cj.jdbc.Driver
+management:
+    security:
+        enabled: false

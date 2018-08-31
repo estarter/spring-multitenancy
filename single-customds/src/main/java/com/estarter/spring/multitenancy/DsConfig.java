@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
+import com.zaxxer.hikari.HikariDataSource;
+
 @Configuration
 public class DsConfig {
 
@@ -21,7 +23,7 @@ public class DsConfig {
     @Bean
     @ConfigurationProperties(prefix = "spring.myds")
     public DataSource dataSource(DataSourceProperties properties) {
-        return properties.initializeDataSourceBuilder().build();
+        return properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
     }
 
 }
